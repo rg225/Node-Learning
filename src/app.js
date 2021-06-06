@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 
+const port = process.env.PORT || 3000;
 
 const app = express();
 const publicPath = path.join(__dirname,'../public');
@@ -20,6 +21,6 @@ app.use(express.static(publicPath));
 //     res.send('Help Page');
 // })
 
-app.listen(3000, () => {
-    console.log('I am on tha port 3000');
+app.listen(port, () => {
+    console.log(`We are on port ${port}`);
 })
